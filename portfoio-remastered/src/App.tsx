@@ -8,12 +8,14 @@ import About from './Components/About'
 import Resume from './Components/Resume'
 import PersonalProjects from './Components/PersonalProjects'
 import ContactMe from './Components/ContactMe'
+import Navbar from './Components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
 		<div className="App">
+			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
