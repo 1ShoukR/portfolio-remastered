@@ -1,13 +1,26 @@
 import React from "react";
+import Description from './Description';
 
 type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <div>
-      
-    </div>
-  );
+		<>
+			<div>
+				<div className="homepageContainer">
+					<div className="introTitleContainer">
+						<div className="picContainer">
+							<div className="intro">
+								<h1 className="text-3xl font-bold underline">Hi. I'm Rahmin. </h1>
+								<h4>Welcome to my website.</h4>
+							</div>
+						</div>
+						<Description />
+					</div>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default Home;
