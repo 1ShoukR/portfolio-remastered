@@ -1,5 +1,6 @@
 import React from "react";
 import Description from './Description';
+import '../css/homepage.css'
 
 type Props = {};
 
