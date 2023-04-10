@@ -1,10 +1,11 @@
 import React from 'react';
-// import MyPic from '../assets/me.jpg';
+import MyPic from '../assets/me.jpg';
 import { Button } from '@mui/material';
 import { Card } from '@mui/material';
+import { Typography } from '@mui/material';
 
 
-type Props = {}
+type Props = {};
 
 const Description = (props: Props) => {
 	return (
@@ -14,53 +15,61 @@ const Description = (props: Props) => {
 					className="muiCARD"
 					sx={{
 						display: 'flex',
+						marginTop: {
+							xs: '240px',
+							sm: '670px',
+                            md: '0px'
+						},
+						height: {
+							xs: 'auto',
+							sm: 'auto',
+						},
 						width: {
-							xs: '480px',
-							sm: '760px',
+							xs: '100%',
+							sm: '90%',
 							md: '1000px',
 						},
 						flexDirection: {
 							xs: 'column',
+							sm: 'column',
 							md: 'row',
-							lg: 'row',
-							xl: 'row',
 						},
 						padding: '40px',
 						borderRadius: '16px',
 						boxShadow: 3,
 						bgcolor: 'text.secondary',
 						gap: '30px',
-						justifyContent: {
-							xs: 'center',
-							md: 'center',
-							lg: 'center',
-							xl: 'center',
-						},
-						alignItems: {
-							xs: 'center',
-							md: 'center',
-							lg: 'center',
-						},
+						justifyContent: 'center',
+						alignItems: 'center',
 					}}>
 					<div className="pictureWrapper">
-						<div className="pictureContainer">{/* <img className="myPicSpecifics" src={MyPic} alt="me" /> */}</div>
+						<div className="pictureContainer">
+							<img className="myPicSpecifics w-full max-w-full sm:h-1/2 " src={MyPic} alt="me" />
+						</div>
 					</div>
 					<div className="descriptionWrapper">
 						<div className="description">
-							<h1 className="aLittleAboutMe">A little about me</h1>
-							<p className="text-white-87">
+							<Typography sx={{ color: '#F0EAD6', fontWeight: 'bold' }} className="aLittleAboutMe">
+								A little about me
+							</Typography>
+							<Typography sx={{ color: '#F0EAD6' }} variant="body1" className="text-white-87">
 								I am incredibly passionate about all things tech! I have attended and graduated the DigitalCrafts Web Development Bootcamp to learn Full-Stack Web Development in order to jumpstart my
 								career in tech, and it is the best decision I have ever made in my life. My love for coding continues to grow exponentially as I learn more and more about the intricacies and nuances
 								of each language that I pursue!
-							</p>
+							</Typography>
 						</div>
-						<div className="buttonWrapper">
+						<div className="buttonWrapper md:px-4 md: mt-6">
 							<div>
 								<a href="/Resume">
 									<Button
 										variant="outlined"
 										sx={{
-											padding: '10px',
+											marginTop: {
+												xs: '70px',
+											},
+											padding: {
+												xs: '10px',
+											},
 											color: '#F0EAD6',
 										}}>
 										Resume
@@ -72,7 +81,12 @@ const Description = (props: Props) => {
 									<Button
 										variant="outlined"
 										sx={{
-											padding: '10px',
+											marginTop: {
+												xs: '70px',
+											},
+											padding: {
+												xs: '10px',
+											},
 											color: '#F0EAD6',
 										}}>
 										Contact Me
@@ -86,4 +100,5 @@ const Description = (props: Props) => {
 		</div>
 	);
 };
+
 export default Description;
