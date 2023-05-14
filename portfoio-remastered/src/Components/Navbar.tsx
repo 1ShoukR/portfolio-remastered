@@ -6,9 +6,7 @@ type Props = {};
 const Navbar = (props: Props) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 	const handleHamburgerClick = () => {
-		console.log('Hamburger clicked');
 		setIsOpen(!isOpen);
-		console.log(isOpen);
 	};
 	return (
 		<nav className="flex items-center justify-between flex-wrap bg-slate-800 p-6 ">
@@ -30,14 +28,14 @@ const Navbar = (props: Props) => {
 					<Link to="/about" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
 						About
 					</Link>
-					<Link to="/contact-me" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
-						Contact
-					</Link>
 					<Link to="/resume" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
 						Resume
 					</Link>
 					<Link to="/personal-projects" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
 						Personal Projects
+					</Link>
+					<Link to="/contact-me" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
+						Contact
 					</Link>
 				</div>
 			</div>
