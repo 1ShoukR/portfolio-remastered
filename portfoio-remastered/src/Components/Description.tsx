@@ -9,15 +9,14 @@ type Props = {};
 
 const Description = (props: Props) => {
 	return (
-		<div className="flex h-screen justify-center items-center">
+		<div className="flex align-center mt-5 justify-center items-center">
 			<div className="myPic lg:max-w-full md:flex md:flex-col justify-center items-center sm:flex sm:flex-col justify-center items-center">
 				<Card
 					className="muiCARD"
 					sx={{
 						display: 'flex',
 						marginTop: {
-							xs: '240px',
-							sm: '670px',
+							xs: '1rem',
                             md: '0px'
 						},
 						height: {
