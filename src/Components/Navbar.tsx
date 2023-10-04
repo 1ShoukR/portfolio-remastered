@@ -4,43 +4,35 @@ import { Link } from 'react-router-dom';
 type Props = {};
 
 const Navbar = (props: Props) => {
-	const [isOpen, setIsOpen] = React.useState(false);
-	const handleHamburgerClick = () => {
-		setIsOpen(!isOpen);
-	};
-	return (
-		<nav className="flex items-center justify-between flex-wrap bg-slate-800 p-6 ">
-			<div className="flex items-center flex-shrink-0 text-white mr-6">
-				<Link to="/" className="font-semibold text-xl tracking-tight">
-					Home
-				</Link>
-			</div>
-			<div className="block lg:hidden">
-				<button onClick={handleHamburgerClick} className="flex items-center px-3 py-2 border rounded text-blue-200 border-blue-400 hover:text-white hover:border-white">
-					<svg className="fill-current h-3 w-3" viewBox="0 0 20 20">
-						<title>Menu</title>
-						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-					</svg>
-				</button>
-			</div>
-			<div className={`w-full ${isOpen ? 'block' : 'hidden'} lg:block flex-grow lg:flex lg:items-center lg:w-auto`}>
-				<div className="text-sm lg:flex-grow">
-					<Link to="/about" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
-						About
-					</Link>
-					<Link to="/resume" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
-						Resume
-					</Link>
-					<Link to="/personal-projects" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
-						Personal Projects
-					</Link>
-					<Link to="/contact-me" className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4">
-						Contact
-					</Link>
-				</div>
-			</div>
-		</nav>
-	);
+    const [isOpen, setIsOpen] = React.useState(false);
+    const handleHamburgerClick = () => {
+        setIsOpen(!isOpen);
+    };
+    return (
+        <nav className="bg-gray-800 p-4">
+            <div className="mx-auto">
+                <div className="flex justify-between">
+                    <div>
+                        <Link to="/" className="text-2xl font-bold text-white">Home</Link>
+                    </div>
+                    <div className="block lg:hidden">
+                        <button onClick={handleHamburgerClick} className="text-white focus:outline-none">
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div className={`lg:flex items-center ${isOpen ? 'flex' : 'hidden'}`}>
+                        <Link to="/about" className="text-white lg:mx-4 my-2 lg:my-0 hover:text-gray-300">About</Link>
+                        <Link to="/resume" className="text-white lg:mx-4 my-2 lg:my-0 hover:text-gray-300">Resume</Link>
+                        <Link to="/personal-projects" className="text-white lg:mx-4 my-2 lg:my-0 hover:text-gray-300">Personal Projects</Link>
+                        <Link to="/contact-me" className="text-white lg:mx-4 my-2 lg:my-0 hover:text-gray-300">Contact</Link>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;
+
